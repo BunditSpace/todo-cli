@@ -1,0 +1,49 @@
+{
+  "name": "todocli",
+  "version": "0.0.0",
+  "author": "BunditSpace @BunditSpace",
+  "bin": {
+    "todocli": "./bin/run"
+  },
+  "bugs": "https://github.com/BunditSpace/todocli/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.19",
+    "@oclif/config": "^1.13.3",
+    "@oclif/plugin-help": "^2.2.1",
+    "oclif": "^1.13.6"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "globby": "^10.0.1",
+    "rimraf": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/BunditSpace/todocli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "todocli",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "BunditSpace/todocli",
+  "scripts": {
+    "postpack": "rimraf oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
